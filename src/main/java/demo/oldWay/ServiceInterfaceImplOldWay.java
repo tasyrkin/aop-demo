@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component("serviceOldWay")
 public class ServiceInterfaceImplOldWay implements ServiceInterface {
 
-    private static final Logger LOGGER = LogManager.getLogger(ServiceInterface.class);
+    private static final Logger LOGGER = LogManager.getLogger(ServiceInterfaceImplOldWay.class);
 
     public void doThings() {
         long start = System.currentTimeMillis();
