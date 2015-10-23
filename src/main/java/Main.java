@@ -9,7 +9,7 @@ public class Main {
 
         serviceNewWay.doThings();
 
-        System.out.println(serviceNewWay.getClass().getCanonicalName());
+        System.out.println(String.format("Real class for serviceNewWay: %s", serviceNewWay.getClass().getCanonicalName()));
 
     }
 
