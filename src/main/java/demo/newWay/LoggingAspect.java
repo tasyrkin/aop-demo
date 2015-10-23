@@ -20,7 +20,7 @@ public class LoggingAspect {
 
     private static final Logger LOGGER = LogManager.getLogger(LoggingAspect.class);
 
-    @Around("execution(* demo.newWay.ServiceInterfaceImplNewWay.doThings(..))")
+    @Around("target(demo.newWay.ServiceInterfaceImplNewWay) && !within(java.lang.Object)")
     public Object log(ProceedingJoinPoint pjp) throws Throwable {
 
         final Signature signature = pjp.getSignature();

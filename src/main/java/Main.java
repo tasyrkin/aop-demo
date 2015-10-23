@@ -11,6 +11,8 @@ public class Main {
 
         final ServiceInterface serviceNewWay = (ServiceInterface)ctx.getBean("serviceNewWay");
         serviceNewWay.doThings();
+
+        System.out.println(serviceNewWay);
     }
 
 }

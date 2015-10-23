@@ -17,7 +17,7 @@ public class ProfilingAspect {
 
     private static final Logger LOGGER = LogManager.getLogger(ProfilingAspect.class);
 
-    @Around("execution(* demo.newWay.ServiceInterfaceImplNewWay.doThings(..))")
+    @Around("target(demo.newWay.ServiceInterfaceImplNewWay) && !within(java.lang.Object)")
     public Object profile(ProceedingJoinPoint pjp) throws Throwable {
 
         final Signature signature = pjp.getSignature();
