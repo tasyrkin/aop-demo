@@ -1,18 +1,16 @@
 import demo.ServiceInterface;
+import demo.newWay.ServiceInterfaceImplNewWay;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
 
-        final ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-config.xml");
+        final ServiceInterface serviceNewWay = new ServiceInterfaceImplNewWay();
 
-        final ServiceInterface serviceOldWay = (ServiceInterface)ctx.getBean("serviceOldWay");
-        serviceOldWay.doThings();
-
-        final ServiceInterface serviceNewWay = (ServiceInterface)ctx.getBean("serviceNewWay");
         serviceNewWay.doThings();
 
-        System.out.println(serviceNewWay);
+        System.out.println(serviceNewWay.getClass().getCanonicalName());
+
     }
 
 }
